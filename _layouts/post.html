@@ -1,0 +1,24 @@
+---
+layout: base
+---
+
+<div class="flex justify-center pt-2 md:pt-8">
+  <div class="flex flex-col md:flex-row items-center py-8">
+    <div>
+    <h1 class="text-6xl font-bold text-center p-6 max-w-xl">{{page.title}}</h1>
+    <div class="flex justify-center">
+    {% for tag in page.tags %}
+      <span class="text-sm py-4  pl-2 text-slate-600/80">{{tag}}</span>
+    {% endfor %}
+    </div>
+    <p class="text-center">{{ page.date | date: "%d-%m-%Y" }} -  {{page.author | default: site.author }}</p>
+    </div>
+    <img src="{{ page.image}}" alt="" class="max-w-sm md:max-w-md p-2 md:px-0">
+  </div>
+</div>
+
+<div class="flex justify-center pt-4 md:pt-12">
+  <article class="prose lg:prose-xl">
+    {{ content }}
+  </article>
+</div>
