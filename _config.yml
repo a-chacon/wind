@@ -1,6 +1,9 @@
-domain: a-chacon.com
-url: https://a-chacon.com
+domain: example.com
+url: https://example.com
 
-name: EstaBien
-email: andres.ch@protonmail.com
-author: Alexandra Borquez
+name: Wind
+email: rodrigo@protonmail.com
+author: Rodrigo Mendez
+
+# disqus:
+#   shortname: example-com

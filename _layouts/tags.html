@@ -1,0 +1,26 @@
+---
+layout: base
+---
+
+<div class="flex flex-wrap gap-y-8 gap-x-12 max-w-prose mx-auto pb-8">
+  <div class="break-inside-avoid-column">
+    <h1 class="text-4xl py-4">Etiquetas</h1>
+    <ul class="list-disc list-inside tag-list">
+      {% for tag in site.tags %}
+      <li class="text-xl"><a href="#{{ tag[0] }}" class="underline md:no-underline hover:underline">#{{ tag[0] }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="break-inside-avoid-column">
+    <h2 class="text-3xl py-4">Publicaciones por Etiqueta</h2>
+    {% for tag in site.tags %}
+    <h3 id="{{ tag[0] }}" class="text-2xl py-3">#{{ tag[0] }}</h3>
+    <ul class="list-disc list-inside ">
+      {% for post in tag[1] %}
+      <li class="text-slate-500 py-2 max-w-sm"><a href="{{ post.url }}" class="text-black underline md:no-underline hover:underline">{{ post.title }}</a> {{ post.date | date: "%d-%m-%Y" }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>

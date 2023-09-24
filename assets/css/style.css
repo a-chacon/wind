@@ -12,3 +12,21 @@
     font-family: playfair, system-ui, sans-serif;
   }
 }
+.fadeIn{
+  animation: fadeIn 1s forwards;
+}
+
+.fadeOut{
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 ;}
+  to { opacity: 1;}
+}
+
+@keyframes fadeOut {
+  from { opacity: 1;}
+  to { opacity: 0;}
+}
+
