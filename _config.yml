@@ -1,9 +1,14 @@
 domain: example.com
 url: https://example.com
 
-name: Wind
+title: Wind
 email: rodrigo@protonmail.com
 author: Rodrigo Mendez
+
+lang: es
+
+plugins:
+  - jekyll-seo-tag
 
 # disqus:
 #   shortname: example-com
