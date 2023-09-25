@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'playfair';
-  src: url('/assets/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf') format('woff2');
+  font-family: 'Prata';
+  src: url('/assets/Prata/Prata-Regular.ttf') format('woff2');
 }
 
 @layer base {
   html {
-    font-family: playfair, system-ui, sans-serif;
+    font-family: Prata, system-ui, sans-serif;
   }
 }
 .fadeIn{

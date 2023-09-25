@@ -10,7 +10,7 @@ layout: base
       <p class="text-center">{{ page.date | date: "%d-%m-%Y" }}</p>
       <div class="flex justify-center">
         {% for tag in page.tags %}
-        <a class="text-sm py-4  pl-2 text-slate-600/80 underline md:no-underline hover:underline" href="/tags/#{{tag}}">#{{tag}}</a>
+        <a class="text-sm md:text-lg py-4  pl-2 text-slate-600/80 underline md:no-underline hover:underline dark:text-slate-100" href="/tags/#{{tag}}">#{{tag}}</a>
         {% endfor %}
       </div>
     </div>
@@ -20,7 +20,7 @@ layout: base
 
 <div class="mx-auto pt-4 md:pt-12">
   <div class="flex justify-center">
-    <article class="prose md:prose-lg xl:prose-xl prose-stone">
+    <article class="prose md:prose-lg xl:prose-xl prose-slate dark:prose-invert font-semibold">
       {{ content }}
     </article>
   </div>
@@ -31,7 +31,7 @@ layout: base
       <div class="flex flex-row items-center py-4 md:py-8">
         <img src="{{ page.next.image}}" alt="" class="w-24 md:w-32">
         <div class="px-2">
-          <h1 class="text-md md:text-xl text-black font-bold">{{page.next.title}}</h1>
+          <h1 class="text-md md:text-xl text-black dark:text-white font-bold">{{page.next.title}}</h1>
           <p class="hidden md:block text-center">{{ page.date | date: "%d-%m-%Y" }} - {{page.author | default: site.author }}</p>
         </div>
         <svg class="w-6 md:w-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
@@ -56,7 +56,7 @@ layout: base
           </g>
         </svg>
         <div class="px-2">
-          <h1 class="text-md md:text-xl text-black font-bold">{{page.previous.title}}</h1>
+          <h1 class="text-md md:text-xl text-black dark:text-white font-bold">{{page.previous.title}}</h1>
           <p class="hidden md:block text-center">{{ page.date | date: "%d-%m-%Y" }} - {{page.author | default: site.author }}</p>
         </div>
         <img src="{{ page.previous.image}}" alt="" class="w-24 md:w-32">

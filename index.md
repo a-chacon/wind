@@ -2,6 +2,6 @@
 layout: home
 ---
 
-## Hola
+# Bienvenide
 
-Este es mi blog y esta soy yo.
+Hoola carepalo

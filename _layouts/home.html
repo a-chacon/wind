@@ -1,8 +1,8 @@
 ---
 layout: base
 ---
-<div class="flex justify-center py-2 md:py-4 lg:py-8">
-  <article class="text-center prose md:prose-lg xl:prose-xl prose-stone">
+<div class="flex justify-center py-8 ">
+  <article class="text-center prose md:prose-lg xl:prose-xl prose-slate dark:prose-invert">
     {{ content }}
   </article>
 </div>
@@ -13,14 +13,14 @@ layout: base
     <a href="{{ post.url }}">
       <img src="{{ post.image }}" alt="" class="w-full max-w-screen-sm h-auto shadow-md">
       <div class="flex flex-col md:flex-row">
-        <p class="text-sm pt-2 md:py-4 text-slate-600/80">{{ post.date | date: "%d-%m-%Y" }}</p>
-        <div class="py-1 md:py-4">
+        <p class="text-sm pt-2 md:py-4 text-slate-600/80 dark:text-slate-100">{{ post.date | date: "%d-%m-%Y" }}</p>
+        <div class="py-1 md:py-4 hidden md:block">
           {% for tag in post.tags %}
-          <span class="text-sm pr-2 md:pl-2 text-slate-600/80">#{{tag}}</span>
+          <span class="text-sm pr-2 md:pl-2 text-slate-600/80 dark:text-slate-100">#{{tag}}</span>
           {% endfor %}
         </div>
       </div>
-      <h3 class="text-lg md:text-xl pb-4">{{post.title}}</h3>
+      <h3 class="text-lg md:text-xl lg:text-2xl pb-4">{{post.title}}</h3>
     </a>
   </div>
   {% endfor %}

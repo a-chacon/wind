@@ -6,82 +6,82 @@
 <nav class="py-4">
   <div class="container mx-auto flex justify-between items-center">
     <div class="text-xl md:text-2xl lg:text-4xl font-semibold "><a href="/">{{ site.title }}</a></div>
-    <div class="hidden md:flex space-x-4">
+    <div class="my-auto hidden md:flex items-center space-x-4">
       {%- if titles_size > 0 -%}
       {%- for path in page_paths -%}
       {%- assign my_page = site.pages | where: "path", path | first -%}
       {%- if my_page.title -%}
-      <a class="page-link {% if my_page.url == current_page_url %}font-bold{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      <a class="hover:scale-105 duration-300 page-link {% if my_page.url == current_page_url %}font-bold{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
       {%- endif -%}
       {%- endfor -%}
       {%- endif -%}
 
-    <div class="">
-      <button id="mode-toggle" class="p-2 bg-gray-200 dark:bg-gray-800 rounded-lg">
-        <svg id="sun-icon" class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <!-- SVG code for a sun icon (light mode) -->
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
+      <div class="hover:scale-105 duration-300">
+        <button id="darkModeToggle" class="p-2 rounded-lg">
+          <svg id="sun-icon" class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- SVG code for a sun icon (light mode) -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
           </svg>
-        </svg>
-        <svg id="moon-icon" class="w-6 h-6 text-yellow-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <!-- SVG code for a moon icon (dark mode) -->
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
+          <svg id="moon-icon" class="w-6 h-6 text-yellow-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- SVG code for a moon icon (dark mode) -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
           </svg>
-        </svg>
-      </button>
-    </div>
+        </button>
+      </div>
     </div>
 
 
 
     <div class="z-50 md:hidden flex">
 
-    <div class="">
-      <button id="mode-toggle-mobile" class="p-2  rounded-lg">
-        <svg id="sun-icon-mobile" class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <!-- SVG code for a sun icon (light mode) -->
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
+      <div class="">
+        <button id="modeToggleMobile" class="p-2  rounded-lg">
+          <svg id="sun-icon-mobile" class="w-6 h-6 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- SVG code for a sun icon (light mode) -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
           </svg>
-        </svg>
-        <svg id="moon-icon-mobile" class="w-6 h-6 text-yellow-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <!-- SVG code for a moon icon (dark mode) -->
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-            <g id="SVGRepo_iconCarrier">
-              <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-            </g>
+          <svg id="moon-icon-mobile" class="w-6 h-6 text-yellow-500 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <!-- SVG code for a moon icon (dark mode) -->
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </g>
+            </svg>
           </svg>
-        </svg>
-      </button>
-    </div>
+        </button>
+      </div>
 
       <button id="mobile-menu-button" class="text-blue">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
         </svg>
       </button>
-      <div id="mobile-menu" class="hidden absolute top-16 right-4 bg-white p-4 rounded shadow-md">
+      <div id="mobile-menu" class="hidden absolute top-16 right-4 bg-white dark:bg-slate-500 p-4 rounded shadow-md">
         {%- if titles_size > 0 -%}
         {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
         {%- if my_page.title -%}
-        <a class="block text-black-700" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+        <a class="block text-black-700 font-semibold p-2" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
         {%- endif -%}
         {%- endfor -%}
         {%- endif -%}
@@ -100,21 +100,64 @@
 </script>
 
 <script>
-  const modeToggle = document.getElementById('mode-toggle');
-  const modeToggleMobile = document.getElementById('mode-toggle-mobile');
-  const sunIcon = document.getElementById('sun-icon');
-  const sunIconMobile = document.getElementById('sun-icon-mobile');
-  const moonIconMobile = document.getElementById('moon-icon-mobile');
+// Desktop version
+const darkModeToggle = document.getElementById('darkModeToggle');
+const sunIcon = document.getElementById('sun-icon');
+const moonIcon = document.getElementById('moon-icon');
+const html = document.documentElement;
+let isDarkMode = false;
 
-  modeToggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    sunIcon.classList.toggle('hidden');
-    moonIcon.classList.toggle('hidden');
-  });
+// Function to toggle dark/light mode
+function toggleDarkMode() {
+    isDarkMode = !isDarkMode;
+    html.classList.toggle('dark', isDarkMode);
+    sunIcon.style.display = isDarkMode ? 'none' : 'block';
+    moonIcon.style.display = isDarkMode ? 'block' : 'none';
+    localStorage.setItem('darkMode', isDarkMode ? 'dark' : 'light'); // Store user preference
+}
 
-  modeToggleMobile.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    sunIconMobile.classList.toggle('hidden');
-    moonIconMobile.classList.toggle('hidden');
-  });
+// Add a click event listener to the toggle button
+darkModeToggle.addEventListener('click', toggleDarkMode);
+
+// Check the user's preference and apply it on page load
+const savedMode = localStorage.getItem('darkMode');
+if (savedMode === 'dark') {
+    html.classList.add('dark');
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+} else {
+    html.classList.remove('dark');
+    sunIcon.style.display = 'block';
+    moonIcon.style.display = 'none';
+}
+
+// Mobile version (using the same storage key as desktop)
+const modeToggleMobile = document.getElementById('modeToggleMobile');
+const sunIconMobile = document.getElementById('sun-icon-mobile');
+const moonIconMobile = document.getElementById('moon-icon-mobile');
+const htmlMobile = document.documentElement;
+
+// Function to toggle dark/light mode for mobile
+function toggleDarkModeMobile() {
+    isDarkMode = !isDarkMode; // Use the same isDarkMode variable as desktop
+    htmlMobile.classList.toggle('dark', isDarkMode);
+    sunIconMobile.style.display = isDarkMode ? 'none' : 'block';
+    moonIconMobile.style.display = isDarkMode ? 'block' : 'none';
+    localStorage.setItem('darkMode', isDarkMode ? 'dark' : 'light'); // Use the same storage key as desktop
+}
+
+// Add a click event listener to the mobile toggle button
+modeToggleMobile.addEventListener('click', toggleDarkModeMobile);
+
+// Check the user's preference and apply it on page load for mobile
+const savedModeMobile = localStorage.getItem('darkMode');
+if (savedModeMobile === 'dark') {
+    htmlMobile.classList.add('dark');
+    sunIconMobile.style.display = 'none';
+    moonIconMobile.style.display = 'block';
+} else {
+    htmlMobile.classList.remove('dark');
+    sunIconMobile.style.display = 'block';
+    moonIconMobile.style.display = 'none';
+}
 </script>
