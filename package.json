@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.10"
+  },
+  "dependencies": {
+    "flowbite": "^1.8.1"
   }
 }
