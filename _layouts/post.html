@@ -4,23 +4,23 @@ layout: base
 
 <div class="flex justify-center md:pt-8">
   <div class="flex flex-col md:flex-row items-center py-4 md:py-8">
-    <div>
-      <h1 class="text-2xl md:text-4xl xl:text-6xl font-bold text-center p-6 max-w-xl">{{page.title}}</h1>
-      <h5 class="text-xl md:text-2xl text-center">{{page.author | default: site.author }}</h5>
-      <p class="text-center">{{ page.date | date: "%d-%m-%Y" }}</p>
+    <div class="basis-4/6">
+      <h1 class="text-2xl md:text-4xl xl:text-6xl font-bold text-center p-6">{{page.title}}</h1>
       <div class="flex justify-center">
         {% for tag in page.tags %}
-        <a class="text-sm md:text-lg py-4  pl-2 text-slate-600/80 underline md:no-underline hover:underline dark:text-slate-100" href="/tags/#{{tag}}">#{{tag}}</a>
+        <a class="text-sm md:text-lg py-4  pl-2 text-slate-600/80 underline md:no-underline hover:underline dark:text-slate-100/80" href="/tags/#{{tag}}">#{{tag}}</a>
         {% endfor %}
       </div>
+      <h5 class="text-lg md:text-xl text-center text-slate-600/80 dark:text-slate-100/80">{{page.author | default: site.author }}</h5>
+      <p class="text-center text-sm text-slate-600/80 dark:text-slate-100/80">{{ page.date | date: "%d-%m-%Y" }}</p>
     </div>
-    <img src="{{ page.image}}" alt="" class="mx-auto w-11/12 md:w-5/12 p-2 md:px-0">
+    <img src="{{ page.image}}" alt="" class="basis-2/6  w-11/12 md:w-5/12 p-2 md:px-0">
   </div>
 </div>
 
-<div class="mx-auto pt-4 md:pt-12">
-  <div class="flex justify-center">
-    <article class="prose md:prose-lg xl:prose-xl prose-slate dark:prose-invert font-semibold">
+<div class="mx-auto py-4 md:py-12">
+  <div class="flex justify-center pb-4 md:pb-8">
+    <article class="prose md:prose-lg  prose-slate dark:prose-invert prose-img:mx-auto prose-img:w-2/3">
       {{ content }}
     </article>
   </div>
@@ -34,13 +34,13 @@ layout: base
           <h1 class="text-md md:text-xl text-black dark:text-white font-bold">{{page.next.title}}</h1>
           <p class="hidden md:block text-center">{{ page.date | date: "%d-%m-%Y" }} - {{page.author | default: site.author }}</p>
         </div>
-        <svg class="w-6 md:w-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
-          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-          <g id="SVGRepo_iconCarrier">
-            <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z" fill="#0F0F0F"></path>
-          </g>
-        </svg>
+      <svg class="w-6 md:w-12 fill-current dark:text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z"></path>
+        </g>
+      </svg>
       </div>
     </a>
     {% endif %}
@@ -48,11 +48,11 @@ layout: base
     {% if page.previous %}
     <a class="previous-post mx-auto transition hover:scale-110 duration-300" href="{{ page.previous.url | relative_url }}">
       <div class="flex flex-row items-center py-4 md:py-8">
-        <svg class="w-6 md:w-12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-6 md:w-12 fill-current dark:text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
-            <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z" fill="#0F0F0F"></path>
+            <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z"></path>
           </g>
         </svg>
         <div class="px-2">
