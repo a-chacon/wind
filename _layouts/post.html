@@ -2,16 +2,16 @@
 layout: base
 ---
 
-<div class="flex justify-center md:pt-8">
+<div class="flex justify-center md:pt-8 w-4/5 mx-auto ">
   <div class="flex flex-col md:flex-row items-center">
     <div class="basis-4/6">
-      <h1 class="text-2xl md:text-4xl xl:text-6xl font-bold text-center p-6">{{page.title}}</h1>
-      <div class="flex justify-center">
+      <h1 class="text-2xl md:text-4xl xl:text-5xl text-center p-6">{{page.title}}</h1>
+      <div class="flex flex-wrap justify-center gap-4">
         {% for tag in page.tags %}
-        <a class="text-sm md:text-lg py-4  pl-2 text-slate-600/80 underline md:no-underline hover:underline dark:text-slate-100/80" href="/tags/#{{tag}}">#{{tag}}</a>
+        <a class="text-sm text-slate-600/80 underline md:no-underline hover:underline dark:text-slate-100/80" href="/tags/#{{tag}}">#{{tag}}</a>
         {% endfor %}
       </div>
-      <div class="flex justify-center items-center gap-2">
+      <div class="flex justify-center items-center gap-2 pt-4">
         <h5 class="text-slate-600/80 dark:text-slate-100/80">{{page.author | default: site.author }}</h5>
         <p class="text-slate-600/80 dark:text-slate-100/80">{{ page.date | date: "%d-%m-%Y" }}</p>
       </div>
@@ -22,19 +22,19 @@ layout: base
 
 <div class="mx-auto py-4 md:py-12">
   <div class="flex justify-center pb-4 md:pb-8">
-    <article class="prose md:prose-lg  prose-slate dark:prose-invert prose-img:mx-auto prose-img:w-2/3">
+    <article class="prose md:prose-lg prose-p:font-extralight prose-headings:font-light prose-slate dark:prose-invert prose-img:mx-auto prose-img:w-2/3">
       {{ content }}
     </article>
   </div>
 
-  <div class="post-navigation py-8 flex flex-col justify-center border-y">
+  {% include social.html %}
+
+  <div class="post-navigation py-8 flex flex-col md:flex-row-reverse justify-center border-y">
     {% if page.next %}
     <a class="next-post mx-auto transition hover:scale-110 duration-300" href="{{ page.next.url | relative_url }}">
       <div class="flex flex-row items-center py-4 md:py-8">
-        <img src="{{ page.next.image}}" alt="" class="w-24 md:w-32">
         <div class="px-2">
-          <h1 class="text-md md:text-xl text-black dark:text-white font-bold">{{page.next.title}}</h1>
-          <p class="hidden md:block text-center">{{ page.date | date: "%d-%m-%Y" }} - {{page.author | default: site.author }}</p>
+          <h1 class="text-md text-black dark:text-white font-bold max-w-sm">{{page.next.title}}</h1>
         </div>
       <svg class="w-6 md:w-12 fill-current dark:text-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -58,14 +58,13 @@ layout: base
           </g>
         </svg>
         <div class="px-2">
-          <h1 class="text-md md:text-xl text-black dark:text-white font-bold">{{page.previous.title}}</h1>
-          <p class="hidden md:block text-center">{{ page.date | date: "%d-%m-%Y" }} - {{page.author | default: site.author }}</p>
+          <h1 class="text-md text-black dark:text-white font-bold max-w-sm">{{page.previous.title}}</h1>
         </div>
-        <img src="{{ page.previous.image}}" alt="" class="w-24 md:w-32">
       </div>
     </a>
     {% endif %}
   </div>
+
   <div class="mx-auto max-w-prose py-8">
   {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}

@@ -5,15 +5,15 @@
 
 <nav class="py-4">
   <div class="container mx-auto flex justify-between items-center">
-    <div class="text-xl md:text-2xl lg:text-4xl font-semibold "><a href="/">{{ site.title }}</a></div>
+    <div class="text-xl md:text-2xl font-semibold "><a href="/">{{ site.title }}</a></div>
     <div class="my-auto hidden md:flex items-center space-x-4">
       {%- if titles_size > 0 -%}
-      {%- for path in page_paths -%}
-      {%- assign my_page = site.pages | where: "path", path | first -%}
-      {%- if my_page.title -%}
-      <a class="hover:scale-105 duration-300 page-link {% if my_page.url == current_page_url %}font-bold{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-      {%- endif -%}
-      {%- endfor -%}
+        {%- for path in page_paths -%}
+          {%- assign my_page = site.pages | where: "path", path | first -%}
+          {%- if my_page.title and my_page.hide_in_nav != true -%}
+            <a class="hover:scale-105 duration-300 page-link {% if my_page.url == current_page_url %}font-bold{% endif %}" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          {%- endif -%}
+        {%- endfor -%}
       {%- endif -%}
 
       <div class="hover:scale-105 duration-300">
@@ -78,12 +78,12 @@
       </button>
       <div id="mobile-menu" class="hidden absolute top-16 right-4 bg-white dark:bg-slate-500 p-4 rounded shadow-md">
         {%- if titles_size > 0 -%}
-        {%- for path in page_paths -%}
-        {%- assign my_page = site.pages | where: "path", path | first -%}
-        {%- if my_page.title -%}
-        <a class="block text-black-700 font-semibold p-2" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-        {%- endif -%}
-        {%- endfor -%}
+          {%- for path in page_paths -%}
+          {%- assign my_page = site.pages | where: "path", path | first -%}
+            {%- if my_page.title and my_page.hide_in_nav != true -%}
+              <a class="block text-black-700 font-semibold p-2" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+            {%- endif -%}
+          {%- endfor -%}
         {%- endif -%}
       </div>
     </div>

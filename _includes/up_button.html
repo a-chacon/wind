@@ -1,0 +1,37 @@
+<div id="up-button" class="fixed bottom-5 right-5 p-2 text-white rounded-full shadow-md cursor-pointer transition duration-300 ease-in-out bg-slate-100" style="display: none;">
+    <a href="#top">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="black" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+      </svg>
+    </a>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var upButton = document.getElementById('up-button');
+
+      // Function to handle scroll event
+      function handleScroll() {
+        if (window.scrollY > 100) {
+          upButton.style.display = 'block'; // Show the button when scrolled down
+        } else {
+          upButton.style.display = 'none'; // Hide the button when at the top
+        }
+      }
+
+      // Add scroll event listener
+      window.addEventListener('scroll', handleScroll);
+
+      // Initial check to show/hide the button based on initial scroll position
+      handleScroll();
+
+      // Add click event listener to scroll to the top when the button is clicked
+      upButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+
