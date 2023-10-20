@@ -1,6 +1,6 @@
 # Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
 
-![Theme Logo or Screenshot](https://postimg.cc/XZqn715L)
+![Theme Logo or Screenshot](https://i.postimg.cc/QMkCmRx2/screenshot.png)
 
 ## Description
 
