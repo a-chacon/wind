@@ -2,10 +2,10 @@ domain: example.com
 url: https://example.com
 
 title: Wind
-email: rodrigo@protonmail.com
-author: Rodrigo Mendez
+email: wind@example.com
+author: Wind Sample
 
-lang: es
+lang: en
 
 plugins:
   - jekyll-seo-tag
