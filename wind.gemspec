@@ -1,13 +1,13 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = 'wind'
+  spec.name          = 'wind-theme'
   spec.version       = '0.0.1'
   spec.authors       = ['a-chacon']
   spec.email         = ['andres.ch@protonmail.com']
 
-  spec.summary       = 'Wind theme for a nice blog.'
-  spec.homepage      = 'https://a-chacon.com'
+  spec.summary       = 'Wind is a clean, minimalistic Jekyll theme designed to offer a delightful blogging experience. '
+  spec.homepage      = 'https://github.com/a-chacon/wind'
   spec.license       = 'MIT'
 
   spec.files = `git ls-files -z`.split("\x0").select do |f|

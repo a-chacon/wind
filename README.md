@@ -50,7 +50,7 @@ To use the Wind Jekyll theme as a Ruby Gem in your Jekyll site, follow these ste
 
 1. **Add Wind Gem to your Gemfile:** Open your Jekyll project's `Gemfile` and add the following line to the `jekyll_plugins` group:
 ```ruby
-gem "wind"
+gem "wind-theme"
 ```
 
 2. **Install Gems:** In your project's root directory, run the following command to install the Wind Gem and its dependencies:
@@ -60,7 +60,7 @@ bundle install
 
 3. **Configure Wind Theme:** Open your Jekyll project's _config.yml file, and set the theme key to "wind":
 ```yalm
-theme: jekyll-wind-theme
+theme: wind-theme
 ```
 
 4. **Use the layouts provided by the theme:** open your index.md or index.markdown page of your jekyll site and put it on the Front Matter section:
