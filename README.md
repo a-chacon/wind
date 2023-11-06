@@ -152,4 +152,6 @@ The theme is available as open source under the terms of the [MIT License](https
 
 If you need help or have questions, you can [contact me](mailto:andres.ch@proton.me).
 
+H
+
 
