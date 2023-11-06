@@ -1,4 +1,4 @@
-# Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
+# FREE JEKYLL THEME Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
 
 ![Theme Logo or Screenshot](https://i.postimg.cc/QMkCmRx2/screenshot.png)
 
