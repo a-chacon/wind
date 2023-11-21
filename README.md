@@ -148,6 +148,18 @@ Minima comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) p
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+## Contributing
+
+We welcome contributions from the community! If you'd like to contribute to the project, please follow these guidelines:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b feature-name`.
+3. Make your changes and commit them: `git commit -m 'Description of your changes'`.
+4. Push your changes to the branch: `git push origin feature-name`.
+5. Submit a pull request.
+
+Please ensure that your pull request includes a clear description of the problem you are solving and the solution implemented. Also, make sure your code follows the project's coding standards.
+
 ## Support or Contact
 
 If you need help or have questions, you can [contact me](mailto:andres.ch@proton.me).
