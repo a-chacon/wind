@@ -5,6 +5,7 @@
 @font-face {
   font-family: 'Prata';
   src: url('/assets/Adamina/Adamina-Regular.ttf') format('woff2');
+  font-display: swap;
 }
 
 @layer base {
@@ -13,11 +14,7 @@
   }
 }
 .fadeIn{
-  animation: fadeIn 1s forwards;
-}
-
-.fadeOut{
-  animation: fadeOut 1s forwards;
+  animation: fadeIn 0.5s forwards;
 }
 
 @keyframes fadeIn {
