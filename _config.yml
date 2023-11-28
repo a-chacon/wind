@@ -12,3 +12,14 @@ plugins:
 
 # disqus:
 #   shortname: example-com
+#
+# rrss:
+  # discord: hoola
+  # facebook: hola
+  # twitter: Hola
+  # instagram: Hola
+  # linkedin: Hola
+  # pinterest: hola
+  # whatsapp: 123
+  # telegram: 123
+  # email: email
