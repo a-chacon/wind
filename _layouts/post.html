@@ -15,7 +15,7 @@ layout: base
         <span class="text-slate-700 dark:text-slate-100/80">{{page.author | default: site.author }}</span>
         <p class="text-slate-700 dark:text-slate-100/80">{{ page.date | date: "%d-%m-%Y" }}</p>
       </div>
-      <div class="mx-auto p-4" >
+      <div class="mx-auto p-4">
         {% include sharing.html %}
       </div>
     </div>
@@ -30,24 +30,24 @@ layout: base
     </article>
   </div>
 
-  <div class="mx-auto my-10" >
+  <div class="mx-auto my-10">
     {% include sharing.html %}
   </div>
 
-  <div class="post-navigation py-8 flex flex-col md:flex-row-reverse justify-center border-y">
+  <div class="post-navigation py-8 flex flex-col md:flex-row-reverse justify-center ">
     {% if page.next %}
     <a class="next-post mx-auto transition hover:scale-110 duration-300" href="{{ page.next.url | relative_url }}">
       <div class="flex flex-row items-center py-4 md:py-8">
         <div class="px-2">
           <span class="text-md text-black dark:text-white font-bold max-w-sm">{{page.next.title}}</span>
         </div>
-      <svg class="w-6 md:w-12 fill-current text-fuchsia-600" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
-        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-        <g id="SVGRepo_iconCarrier">
-          <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z"></path>
-        </g>
-      </svg>
+        <svg class="w-6 md:w-12 fill-current text-indigo-600" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" transform="rotate(180)">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+          <g id="SVGRepo_iconCarrier">
+            <path d="M16.1795 3.26875C15.7889 2.87823 15.1558 2.87823 14.7652 3.26875L8.12078 9.91322C6.94952 11.0845 6.94916 12.9833 8.11996 14.155L14.6903 20.7304C15.0808 21.121 15.714 21.121 16.1045 20.7304C16.495 20.3399 16.495 19.7067 16.1045 19.3162L9.53246 12.7442C9.14194 12.3536 9.14194 11.7205 9.53246 11.33L16.1795 4.68297C16.57 4.29244 16.57 3.65928 16.1795 3.26875Z"></path>
+          </g>
+        </svg>
       </div>
     </a>
     {% endif %}
@@ -55,7 +55,7 @@ layout: base
     {% if page.previous %}
     <a class="previous-post mx-auto transition hover:scale-110 duration-300" href="{{ page.previous.url | relative_url }}">
       <div class="flex flex-row items-center py-4 md:py-8">
-        <svg class="w-6 md:w-12 fill-current text-fuchsia-600" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <svg class="w-6 md:w-12 fill-current text-indigo-600" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
           <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
           <g id="SVGRepo_iconCarrier">
@@ -70,9 +70,9 @@ layout: base
     {% endif %}
   </div>
 
-  <div class="mx-auto max-w-prose py-8">
   {%- if site.disqus.shortname -%}
-    {%- include disqus_comments.html -%}
+    <div class="mx-auto max-w-prose py-8">
+      {%- include disqus_comments.html -%}
+    </div>
   {%- endif -%}
-  </div>
 </div>
