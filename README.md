@@ -140,6 +140,28 @@ If you don't want to display comments for a particular post you can disable them
 To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
 e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
 
+### Footer
+
+To customize the text in the footer:
+
+1. Declare your site language in the `_config.yml` file:
+
+   ```yaml
+   language: "your_language_code"
+   ```
+
+2. Create a language `data` file in the data folder, using your site language code (e.g., `es.yml` for Spanish).
+
+3. Customize the footer variables in the language data file:
+
+    ```yml
+    footer:
+      title: "Mantengamosnos conectados"
+      description: "Puesdes encontrarme en cualquiera de estos canales:"
+      pages: "Paginas"
+    ```
+Adjust the values of title, description, and pages as needed.
+
 ### Plugins
 
 Minima comes with [`jekyll-seo-tag`](https://github.com/jekyll/jekyll-seo-tag) plugin preinstalled to make sure your website gets the most useful meta tags. See [usage](https://github.com/jekyll/jekyll-seo-tag#usage) to know how to set it up.
