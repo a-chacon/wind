@@ -2,12 +2,12 @@
 layout: base
 ---
 <div class="flex justify-center py-8 ">
-  <article class="text-center prose prose-p:font-extralight prose-slate dark:prose-invert prose-h1:underline prose-h1:decoration-2 prose-h1:decoration-indigo-600 prose-h1:underline-offset-4">
+  <article class="text-center prose prose-p:font-extralight prose-slate dark:prose-invert primary-underline">
     {{ content }}
   </article>
 </div>
 
-<div class="md:w-4/5 mx-auto gap-4 md:gap-6 columns-2 md:columns-3">
+<div class="md:w-4/5 mx-auto gap-4 md:gap-6 columns-2 md:columns-3 mb-10">
   {% for post in site.posts %}
   <div class="md:fadeIn border-b pb-8 mb-8 break-inside-avoid-column ">
     <div class="hover:underline hover:decoration-2 hover:underline-offset-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 duration-300">

@@ -1,0 +1,18 @@
+---
+---
+
+$primary_color: {{ site.color | default: "#a505f0" }};
+
+.share-button {
+   background-color: $primary_color;
+   border-color: $primary_color;
+    opacity: 0.9;
+    &:hover {
+      opacity: 1;
+    }
+}
+
+h1 {
+   text-decoration-color: $primary_color;
+   text-decoration-line: underline;
+}

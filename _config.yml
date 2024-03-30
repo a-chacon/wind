@@ -10,6 +10,8 @@ lang: en
 plugins:
   - jekyll-seo-tag
 
+color: "#a505f0" 
+
 # disqus:
 #   shortname: example-com
 #
