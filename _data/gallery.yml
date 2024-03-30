@@ -1,0 +1,14 @@
+photos:
+  - description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget risus nisi.
+    url: https://picsum.photos/200/300
+  - description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget risus nisi.
+    url: https://picsum.photos/800/800
+  - description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget risus nisi.
+    url: https://picsum.photos/1200/720
+  - description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget risus nisi.
+    url: https://picsum.photos/600/600
+  - description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget risus nisi.
+    url: https://picsum.photos/400/600
+  - description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget risus nisi.
+    url: https://picsum.photos/300/200
+

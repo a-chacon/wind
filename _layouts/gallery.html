@@ -1,0 +1,9 @@
+---
+layout: base
+---
+
+<div class="md:w-4/5 mx-auto columns-2 md:columns-3 my-10 gap-0">
+  {% for pic in site.data.gallery.photos %}
+  <img src="{{ pic.url }}" alt="{{pic.description}}" class="w-full max-w-screen-sm h-auto shadow-md">
+  {% endfor %}
+</div>
