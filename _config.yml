@@ -10,7 +10,7 @@ lang: en
 plugins:
   - jekyll-seo-tag
 
-color: "#a505f0" 
+color: "#13ccf9" 
 
 # disqus:
 #   shortname: example-com
