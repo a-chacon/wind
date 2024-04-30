@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Prata';
-  src: url('/assets/Adamina/Adamina-Regular.ttf') format('woff2');
+  font-family: 'Adamina';
+  src: url('/assets/Adamina/Adamina-Regular.ttf') format('truetype');
   font-display: swap;
 }
 
 @layer base {
   html {
-    font-family: Prata, system-ui, sans-serif;
+    font-family: Adamina, system-ui, sans-serif;
   }
 }
 .fadeIn{
