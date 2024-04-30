@@ -1,0 +1,3 @@
+# run below command to test this config
+# bundle exec jekyll serve -l --config _config.yml,_config-local.yml
+baseurl: /blog
