@@ -18,7 +18,7 @@ layout: base
     <h3 id="{{ tag[0] }}" class="text-lg md:text-xl py-3 md:pb-4 md:pt-6"># {{ tag[0] }}</h3>
     <ul class="list-disc list-inside ">
       {% for post in tag[1] %}
-      <li class="text-slate-500 dark:text-slate-200 py-2"><a href="{{ post.url }}" class="text-slate-700 dark:text-slate-100 underline md:no-underline hover:underline">{{ post.title }}</a> {{ post.date | date: "%d-%m-%Y" }}</li>
+      <li class="text-slate-500 dark:text-slate-200 py-2"><a href="{{ post.url | relative_url }}" class="text-slate-700 dark:text-slate-100 underline md:no-underline hover:underline">{{ post.title }}</a> {{ post.date | date: "%d-%m-%Y" }}</li>
       {% endfor %}
     </ul>
     {% endfor %}
