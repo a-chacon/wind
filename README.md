@@ -6,6 +6,10 @@
 
 Wind is a clean, minimalistic Jekyll theme designed to offer a delightful blogging experience. With a focus on simplicity and aesthetics, Wind brings an elegant touch to your blog or personal website.
 
+## Sites Using It (If you have a site using this theme please send me a PR including it here)
+
+- https://estabien.cl
+
 ## Table of Contents
 
 - [Features](#features)
@@ -90,6 +94,7 @@ Refers to files within the `_layouts` directory, that define the markup for your
   - `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
   - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts. Example about.md page.
   - `post.html` &mdash; The layout for your posts.
+  - `galley.html` &mdash; The layout for a image galley.
 
 #### Home Layout
 
@@ -98,6 +103,16 @@ Refers to files within the `_layouts` directory, that define the markup for your
 ##### *Main Heading and Content-injection*
 
 The *home* layout will inject all content from your `index.md` / `index.html` **before** the **`Posts`** section. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *I recommended that you title this section with a Heading2 (`##`)*.
+
+#### Gallery Layout
+
+This Layout needs a data file with the name `_data/gallery.yml` and the following structure:
+```
+photos:
+  - url: path/to/your/photo.png
+    description: Alt for the image
+    quote: text on hover
+```
 
 ### Includes
 
