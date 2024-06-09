@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Prata';
-  src: url('/assets/Adamina/Adamina-Regular.ttf') format('woff2');
+  font-family: 'Adamina';
+  src: url('/assets/Adamina/Adamina-Regular.ttf') format('truetype');
   font-display: swap;
 }
 
@@ -25,7 +25,7 @@
   h4,
   h5,
   h6 {
-    font-family: 'Prata', serif;
+    font-family: 'Adamina', serif;
   }
 }
 
