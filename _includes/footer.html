@@ -6,9 +6,9 @@
       <div class="w-full lg:w-6/12 px-4">
         <h4 class="text-3xl fonat-semibold">{{ site.data[site.lang].footer.title | default: "Let's keep in touch!" |
           localize}}</h4>
-        <h5 class="text-lg dark:text-slate-300 mt-2 mb-2">
+        <span class="text-lg dark:text-slate-300 my-4">
           {{ site.data[site.lang].footer.description | default: "Find us on any of these platforms." }}
-        </h5>
+        </span>
         {% include social.html %}
       </div>
       <div class="w-full lg:w-6/12 px-4">
