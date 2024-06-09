@@ -8,22 +8,90 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'OpenSans';
+  src: url('/assets/Open_Sans/static/OpenSans-Regular.ttf') format('woff2');
+  font-display: swap;
+}
+
 @layer base {
-  html {
-    font-family: Prata, system-ui, sans-serif;
+  body {
+    font-family: 'OpenSans', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: 'Prata', serif;
   }
 }
-.fadeIn{
+
+.fadeIn {
   animation: fadeIn 0.5s forwards;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0 ;}
-  to { opacity: 1;}
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
-  from { opacity: 1;}
-  to { opacity: 0;}
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
+/* Estilo para la galería y los ítems */
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Estilo para el overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Oscurecimiento */
+  opacity: 0;
+  /* Oculto por defecto */
+  transition: 0.5s ease;
+  /* Transición suave para el efecto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el texto encima de la imagen */
+.text {
+  color: white;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Efecto hover */
+.gallery-item:hover img {
+  filter: brightness(70%);
+  /* Oscurece la imagen */
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+  /* Muestra el overlay */
+}
