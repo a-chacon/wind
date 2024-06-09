@@ -1,6 +1,6 @@
 # FREE JEKYLL THEME Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
 
-![Theme Logo or Screenshot](https://i.postimg.cc/QMkCmRx2/screenshot.png)
+![Theme Logo or Screenshot](https://i.postimg.cc/PqYsQX71/Wind-Write-an-awesome-description-for-your-new-site-here-You-can-edit-this-line-in-config-yml-It.png)
 
 ## Description
 
