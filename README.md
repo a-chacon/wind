@@ -1,6 +1,6 @@
 # FREE JEKYLL THEME Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
 
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="achacon" data-color="#FFDD00" data-emoji=""  data-font="Poppins" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+<a href="https://www.buymeacoffee.com/achacon" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ![Theme Logo or Screenshot](https://i.postimg.cc/PqYsQX71/Wind-Write-an-awesome-description-for-your-new-site-here-You-can-edit-this-line-in-config-yml-It.png)
 
