@@ -1,5 +1,7 @@
 # FREE JEKYLL THEME Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="achacon" data-color="#FFDD00" data-emoji=""  data-font="Poppins" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+
 ![Theme Logo or Screenshot](https://i.postimg.cc/PqYsQX71/Wind-Write-an-awesome-description-for-your-new-site-here-You-can-edit-this-line-in-config-yml-It.png)
 
 ## Description
@@ -8,7 +10,7 @@ Wind is a clean, minimalistic Jekyll theme designed to offer a delightful bloggi
 
 ## Sites Using It (If you have a site using this theme please send me a PR including it here)
 
-- https://estabien.cl
+- <https://estabien.cl>
 
 ## Table of Contents
 
@@ -53,21 +55,25 @@ Wind is a clean, minimalistic Jekyll theme designed to offer a delightful bloggi
 To use the Wind Jekyll theme as a Ruby Gem in your Jekyll site, follow these steps:
 
 1. **Add Wind Gem to your Gemfile:** Open your Jekyll project's `Gemfile` and add the following line to the `jekyll_plugins` group:
+
 ```ruby
 gem "wind-theme"
 ```
 
 2. **Install Gems:** In your project's root directory, run the following command to install the Wind Gem and its dependencies:
+
 ```
 bundle install
 ```
 
-3. **Configure Wind Theme:** Open your Jekyll project's _config.yml file, and set the theme key to "wind":
+3. **Configure Wind Theme:** Open your Jekyll project's \_config.yml file, and set the theme key to "wind":
+
 ```yalm
 theme: wind-theme
 ```
 
 4. **Use the layouts provided by the theme:** open your index.md or index.markdown page of your jekyll site and put it on the Front Matter section:
+
 ```
 ---
 layout: home
@@ -76,6 +82,7 @@ layout: home
 ```
 
 5. **Local Development:** Run the following command to preview your Jekyll site locally:
+
 ```
 bundle exec jekyll serve
 ```
@@ -88,25 +95,26 @@ Wind has been scaffolded by the `jekyll new-theme` command and therefore has all
 
 Refers to files within the `_layouts` directory, that define the markup for your theme.
 
-  - `base.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their
-    contents into this file at the line that says ` {{ content }} ` and are linked to this file via
-    [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: base`.
-  - `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
-  - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts. Example about.md page.
-  - `post.html` &mdash; The layout for your posts.
-  - `galley.html` &mdash; The layout for a image galley.
+- `base.html` &mdash; The base layout that lays the foundation for subsequent layouts. The derived layouts inject their
+  contents into this file at the line that says `{{ content }}` and are linked to this file via
+  [FrontMatter](https://jekyllrb.com/docs/frontmatter/) declaration `layout: base`.
+- `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
+- `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts. Example about.md page.
+- `post.html` &mdash; The layout for your posts.
+- `galley.html` &mdash; The layout for a image galley.
 
 #### Home Layout
 
-`home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page. 
+`home.html` is a flexible HTML layout for the site's landing-page / home-page / index-page.
 
-##### *Main Heading and Content-injection*
+##### _Main Heading and Content-injection_
 
-The *home* layout will inject all content from your `index.md` / `index.html` **before** the **`Posts`** section. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. *I recommended that you title this section with a Heading2 (`##`)*.
+The _home_ layout will inject all content from your `index.md` / `index.html` **before** the **`Posts`** section. This will allow you to include non-posts related content to be published on the landing page under a dedicated heading. _I recommended that you title this section with a Heading2 (`##`)_.
 
 #### Gallery Layout
 
 This Layout needs a data file with the name `_data/gallery.yml` and the following structure:
+
 ```
 photos:
   - url: path/to/your/photo.png
@@ -118,14 +126,13 @@ photos:
 
 Refers to snippets of code within the `_includes` directory that can be inserted in multiple layouts (and another include-file as well) within the same theme-gem.
 
-  - `disqus_comments.html` &mdash; Code to markup disqus comment box.
-  - `footer.html` &mdash; Defines the site's footer section.
-  - `head.html` &mdash; Code-block that defines the `<head></head>` in *default* layout.
-  - `custom-head.html` &mdash; Placeholder to allow users to add more metadata to `<head />`.
-  - `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
-  - `navbar.html` &mdash; Defines the site's navbar section. By default, `title` is used in the left section and main pages are displayed in the rigth section.
-  - `up_button.html` &mdash; Includes the code related to the up button.
-
+- `disqus_comments.html` &mdash; Code to markup disqus comment box.
+- `footer.html` &mdash; Defines the site's footer section.
+- `head.html` &mdash; Code-block that defines the `<head></head>` in _default_ layout.
+- `custom-head.html` &mdash; Placeholder to allow users to add more metadata to `<head />`.
+- `header.html` &mdash; Defines the site's main header section. By default, pages with a defined `title` attribute will have links displayed here.
+- `navbar.html` &mdash; Defines the site's navbar section. By default, `title` is used in the left section and main pages are displayed in the rigth section.
+- `up_button.html` &mdash; Includes the code related to the up button.
 
 ## Configuration
 
@@ -140,8 +147,8 @@ Optionally, if you have a Disqus account, you can tell Jekyll to use it to show 
 To enable it, after setting the url field, you also need to add the following lines to your Jekyll site:
 
 ```yaml
-  disqus:
-    shortname: my_disqus_shortname
+disqus:
+  shortname: my_disqus_shortname
 ```
 
 You can find out more about Disqus' shortnames [here](https://help.disqus.com/installation/whats-a-shortname).
@@ -153,7 +160,7 @@ If you don't want to display comments for a particular post you can disable them
 ## Customization
 
 To override the default structure and style of minima, simply create the concerned directory at the root of your site, copy the file you wish to customize to that directory, and then edit the file.
-e.g., to override the [`_includes/head.html `](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
+e.g., to override the [`_includes/head.html`](_includes/head.html) file to specify a custom style path, create an `_includes` directory, copy `_includes/head.html` from minima gem folder to `<yoursite>/_includes` and start editing that file.
 
 ### Footer
 
@@ -161,21 +168,22 @@ To customize the text in the footer:
 
 1. Declare your site language in the `_config.yml` file:
 
-   ```yaml
-   language: "your_language_code"
-   ```
+    ```yaml
+    language: "your_language_code"
+    ```
 
 2. Create a language `data` file in the data folder, using your site language code (e.g., `es.yml` for Spanish).
 
 3. Customize the footer variables in the language data file:
 
-    ```yml
-    footer:
-      title: "Mantengamosnos conectados"
-      description: "Puesdes encontrarme en cualquiera de estos canales:"
-      pages: "Paginas"
-    ```
-Adjust the values of title, description, and pages as needed.
+        ```yml
+        footer:
+          title: "Mantengamosnos conectados"
+          description: "Puesdes encontrarme en cualquiera de estos canales:"
+          pages: "Paginas"
+        ```
+
+    Adjust the values of title, description, and pages as needed.
 
 ### Plugins
 
@@ -200,6 +208,3 @@ Please ensure that your pull request includes a clear description of the problem
 ## Support or Contact
 
 If you need help or have questions, you can [contact me](mailto:andres.ch@proton.me).
-
-
-

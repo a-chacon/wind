@@ -1,7 +1,7 @@
 ---
 layout: home
 ---
+# Welcome
 
-# Bienvenide
+Hello Friend!
 
-Hoola carepalo
