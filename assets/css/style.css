@@ -2,17 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Adamina';
-  src: url('/assets/Adamina/Adamina-Regular.ttf') format('truetype');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'OpenSans';
-  src: url('/assets/Open_Sans/static/OpenSans-Regular.ttf') format('woff2');
-  font-display: swap;
-}
 
 @layer base {
   body {

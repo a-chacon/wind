@@ -1,5 +1,3 @@
-# FREE JEKYLL THEME Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
-
 <a href="https://jekyll-themes.com/a-chacon/wind">
   <img
     src="https://img.shields.io/badge/featured%20on-JT-red.svg"
@@ -7,6 +5,10 @@
     alt="Jekyll Themes Shield"
   />
 </a>
+
+# Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
+
+If you like it please think on supporting my job:
 
 <a href="https://www.buymeacoffee.com/achacon" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 

@@ -9,9 +9,10 @@ layout: base
 
 <div class="md:w-4/5 mx-auto gap-4 md:gap-6 columns-2 md:columns-3 mb-10">
   {% for post in site.posts %}
-  <div class="md:fadeIn border-b pb-8 mb-8 break-inside-avoid-column ">
-    <div class="hover:underline hover:decoration-2 hover:underline-offset-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 duration-300">
-      <a href="{{ post.url | relative_url }}" >
+  <div class="md:fadeIn pb-8 mb-8 break-inside-avoid-column ">
+    <div
+      class="hover:underline hover:decoration-2 hover:underline-offset-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 duration-300">
+      <a href="{{ post.url | relative_url }}">
         <img src="{{ post.image | relative_url }}" alt="" class="w-full max-w-screen-sm h-auto shadow-md">
         <h2 class="text-lg md:text-xl lg:text-2xl pt-5 text-ellipsis overflow-hidden">{{post.title}}</h2>
       </a>

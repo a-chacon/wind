@@ -3,5 +3,5 @@ layout: home
 ---
 # Welcome
 
-Hello Friend!
+Hello World. Hello Friend.
 

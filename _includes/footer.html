@@ -20,7 +20,7 @@
               {% for page in site.pages %}
               <li>
                 <a class="text-slate-600 hover:text-slate-800 dark:text-slate-300 dark:hover:text-slate-200 "
-                  href="{{ page.url }}">{{ page.title }}</a>
+                  href="{{ page.url | relative_url }}">{{ page.title }}</a>
               </li>
               {% endfor %}
             </ul>

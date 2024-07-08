@@ -1,5 +1,6 @@
 domain: example.com
 url: https://example.com
+baseurl: "/wind"
 
 title: Wind
 email: wind@example.com
@@ -10,18 +11,11 @@ lang: en
 plugins:
   - jekyll-seo-tag
 
-color: "#13ccf9" 
-
+color: "#13ccf9"
 # disqus:
 #   shortname: example-com
 #
-# rrss:
-  # discord: hoola
-  # facebook: hola
-  # twitter: Hola
-  # instagram: Hola
-  # linkedin: Hola
-  # pinterest: hola
-  # whatsapp: 123
-  # telegram: 123
-  # email: email
+rrss:
+  email: "example@example.cl"
+  telegram: "https://t.me/"
+  discord: "https://discord.com/"
