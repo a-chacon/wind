@@ -4,11 +4,13 @@
 @font-face {
   font-family: 'Adamina';
   src: url({{ "/assets/Adamina/Adamina-Regular.ttf" | relative_url }});
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'OpenSans';
   src: url({{ "/assets/Open_Sans/static/OpenSans-Regular.ttf" | relative_url }});
+  font-display: swap;
 }
 
 $primary_color: {{ site.color | default: "#a505f0" }};

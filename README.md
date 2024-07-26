@@ -1,10 +1,18 @@
+<div style="display: flex; flex-direction: column; justify-content: center; align-items: center; height: 50px;">
+
 <a href="https://jekyll-themes.com/a-chacon/wind">
   <img
     src="https://img.shields.io/badge/featured%20on-JT-red.svg"
-    height="20"
     alt="Jekyll Themes Shield"
   />
 </a>
+
+![GitHub Pages](https://github.com/a-chacon/wind/actions/workflows/jekyll.yml/badge.svg?branch=main)
+![GitHub License](https://img.shields.io/github/license/a-chacon/wind)
+![Gem Downloads (for latest version)](https://img.shields.io/gem/dtv/wind-theme)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/a-chacon/wind)
+
+</div>
 
 # Wind: A Minimalistic, Simple, and Beautiful Blogging Theme
 
