@@ -68,42 +68,86 @@ Wind is a clean, minimalistic Jekyll theme designed to offer a delightful bloggi
 
 13. **Author Profile:** Personalize your blog by adding an author profile section, allowing you to share information about yourself and connect with your audience on a more personal level.
 
-## Installation
+## Installation: The Easy Way to Have Your Site on GitHub Pages (Recommended!) 😄
 
-To use the Wind Jekyll theme as a Ruby Gem in your Jekyll site, follow these steps:
+1. **Navigate to the Main Page of the Repository**
 
-1. **Add Wind Gem to your Gemfile:** Open your Jekyll project's `Gemfile` and add the following line to the `jekyll_plugins` group:
+   On GitHub.com, go to the main page of the repository at [wind-theme](https://github.com/a-chacon/wind).
 
-```ruby
-gem "wind-theme"
-```
+2. **Click 'Use this Template'**
 
-2. **Install Gems:** In your project's root directory, run the following command to install the Wind Gem and its dependencies:
+   Click the "Use this template" button above the file list and select "Create a new repository."
 
-```
-bundle install
-```
+3. **Set Repository Details**
 
-3. **Configure Wind Theme:** Open your Jekyll project's \_config.yml file, and set the theme key to "wind":
+   - Select the owner of the repository.
+   - Type a name for your repository. If you want the site to be available at `https://YOURUSERNAME.github.io`, name it `YOURUSERNAME.github.io` (replace `YOURUSERNAME` with your GitHub username). Otherwise, you can choose any name you prefer, and the site will be available at `https://YOURUSERNAME.github.io/REPOSITORYNAME`.
+   - Add an optional description.
+   - Choose repository visibility.
 
-```yalm
-theme: wind-theme
-```
+4. **Create Repository from Template**
 
-4. **Use the layouts provided by the theme:** open your index.md or index.markdown page of your jekyll site and put it on the Front Matter section:
+   Click "Create repository from template."
 
-```
----
-layout: home
----
+5. **Enable GitHub Pages**
 
-```
+   To deploy the site on GitHub Pages, enable it in your repository settings. Go to **Settings -> Pages -> Source** and select `GitHub Actions`.
 
-5. **Local Development:** Run the following command to preview your Jekyll site locally:
+6. **Customize Your Website Settings**
 
-```
-bundle exec jekyll serve
-```
+   Edit the `_config.yml` file to change any settings you want. The settings in the file are self-explanatory, and there are comments inside to help you understand what each setting does. After making changes, click the "Commit changes" button to save them.
+
+7. **Congratulations! You Have a Website!**
+
+   If you named the repository `YOURUSERNAME.github.io`, your website should be ready in a minute or two at `https://YOURUSERNAME.github.io`. If you used a different name, your website will be available at `https://YOURUSERNAME.github.io/REPOSITORYNAME`. Every time you make a change to any file, your website will be rebuilt and updated in about a minute.
+
+## Advanced Installation (Optional) ⚙
+
+1. **Create a New Jekyll Site**
+
+   If you don’t already have a Jekyll site, create one with:
+
+   ```bash
+    jekyll new my-site
+   ```
+
+   Then, navigate into your new site’s directory:
+
+   ```bash
+    cd my-site
+   ```
+
+2. **Add the Theme to Your Gemfile**
+
+   Open your `Gemfile` and add this line:
+
+   ```ruby
+    gem "wind-theme"
+   ```
+
+3. **Update Your `_config.yml`**
+
+   In your `_config.yml` file, add this line:
+
+   ```yaml
+   theme: wind-theme
+   ```
+
+4. **Install the Theme**
+
+   Run the following command to install the theme and its dependencies:
+
+   ```bash
+    bundle
+   ```
+
+5. **Run Your Site**
+
+   Start your Jekyll site with:
+
+   ```bash
+    bundle exec jekyll serve
+   ```
 
 ## Usage
 
