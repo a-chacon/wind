@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = 'wind-theme'
-  spec.version       = '0.1.3'
+  spec.version       = '0.1.4'
   spec.authors       = ['a-chacon']
   spec.email         = ['andres.ch@protonmail.com']
 
