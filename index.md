@@ -3,5 +3,4 @@ layout: home
 ---
 # Welcome
 
-Hello World. Hello Friend.
-
+Hi I am Nikita Rai this is my design portfolio!!
