@@ -163,7 +163,7 @@ Refers to files within the `_layouts` directory, that define the markup for your
 - `home.html` &mdash; The layout for your landing-page / home-page / index-page. [[More Info.](#home-layout)]
 - `page.html` &mdash; The layout for your documents that contain FrontMatter, but are not posts. Example about.md page.
 - `post.html` &mdash; The layout for your posts.
-- `galley.html` &mdash; The layout for a image galley.
+- `gallery.html` &mdash; The layout for a image gallery.
 
 #### Home Layout
 
